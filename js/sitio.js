@@ -83,6 +83,21 @@ document.querySelectorAll('.reproductor[data-tipo="youtube"]').forEach(r => {
   });
 });
 
+// ---------- Spotify: el reproductor del programa carga solo al hacer clic ----------
+document.querySelectorAll('.reproductor[data-tipo="spotify"]').forEach(r => {
+  const boton = r.querySelector(".cargar");
+  if (!boton) return;
+  boton.addEventListener("click", () => {
+    const f = document.createElement("iframe");
+    f.src = "https://open.spotify.com/embed/show/" + encodeURIComponent(r.dataset.programa) + "?utm_source=generator&theme=0";
+    f.title = "Jiu-ji Podcast en Spotify";
+    f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+    f.loading = "lazy";
+    r.classList.add("cargado");
+    r.replaceChildren(f);
+  });
+});
+
 // ---------- Menú en celular ----------
 const menuBtn = document.querySelector(".menu-btn"), menu = document.getElementById("menu");
 function cerrarMenu() { menu.classList.remove("abierto"); menuBtn.setAttribute("aria-expanded", "false"); }

@@ -32,6 +32,9 @@ export const EN = {
   "Jiu-ji Podcast en YouTube": "Jiu-ji Podcast on YouTube",
   "Ver el canal": "Visit the channel",
   "Ver los episodios aquí": "Watch the episodes here",
+  "Jiu-ji Podcast en Spotify": "Jiu-ji Podcast on Spotify",
+  "Abrir en Spotify": "Open in Spotify",
+  "Escuchar aquí": "Listen here",
 
   "para marcas": "for brands",
   "Pon tu marca en el tatami": "Put your brand on the mat",
