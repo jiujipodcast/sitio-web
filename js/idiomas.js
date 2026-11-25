@@ -29,6 +29,9 @@ export const EN = {
     "Listen while you train, drive or work, or watch it on video. Every new episode shows up here.",
   "Reproductor de Spotify del programa: falta el enlace del programa": "Spotify show player: show link pending",
   "Lista de YouTube: falta el enlace del canal o de la lista": "YouTube playlist: channel or playlist link pending",
+  "Jiu-ji Podcast en YouTube": "Jiu-ji Podcast on YouTube",
+  "Ver el canal": "Visit the channel",
+  "Ver los episodios aquí": "Watch the episodes here",
 
   "para marcas": "for brands",
   "Pon tu marca en el tatami": "Put your brand on the mat",
@@ -100,7 +103,7 @@ export const MENSAJES = {
   },
 };
 
-const SELECTOR = ".saltar, #menu a, .menu-btn .txt, .acciones a, .bajar, main h2, main h3, main p, main label, main option, .formatos strong, .formatos span, main .btn, .pendiente, .gracie p, .logo-gracie, .legal";
+const SELECTOR = ".saltar, #menu a, .menu-btn .txt, .acciones a, .bajar, main h2, main h3, main p, main label, main option, .formatos strong, .formatos span, main .btn, .fachada-titulo, .pendiente, .gracie p, .logo-gracie, .legal";
 const limpio = t => t.replace(/\s+/g, " ").trim();
 let guardados = null;
 

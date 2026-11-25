@@ -68,6 +68,21 @@ function cambiarIdioma(nuevo) {
 botonesIdioma.forEach(b => b.addEventListener("click", () => { if (b.dataset.lang !== lang) cambiarIdioma(b.dataset.lang); }));
 try { const g = localStorage.getItem("jiuji-idioma"); if (g === "en") cambiarIdioma("en"); } catch (e) {}
 
+// ---------- Reproductores: YouTube carga solo al hacer clic (más rápido y sin cookies antes de tiempo) ----------
+document.querySelectorAll('.reproductor[data-tipo="youtube"]').forEach(r => {
+  const boton = r.querySelector(".cargar");
+  if (!boton || r.dataset.activo !== "si") return;
+  boton.hidden = false;
+  boton.addEventListener("click", () => {
+    const f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/videoseries?list=" + encodeURIComponent(r.dataset.lista);
+    f.title = "Episodios de Jiu-ji Podcast en YouTube";
+    f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    f.allowFullscreen = true; f.loading = "lazy";
+    r.replaceChildren(f);
+  });
+});
+
 // ---------- Menú en celular ----------
 const menuBtn = document.querySelector(".menu-btn"), menu = document.getElementById("menu");
 function cerrarMenu() { menu.classList.remove("abierto"); menuBtn.setAttribute("aria-expanded", "false"); }

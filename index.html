@@ -118,8 +118,15 @@
       <div class="reproductor" data-tipo="spotify">
         <p class="pendiente">Reproductor de Spotify del programa: falta el enlace del programa</p>
       </div>
-      <div class="reproductor video" data-tipo="youtube">
-        <p class="pendiente">Lista de YouTube: falta el enlace del canal o de la lista</p>
+      <!-- Lista de "subidos" del canal. Cuando haya videos, cambiar data-activo="no" por data-activo="si". -->
+      <div class="reproductor video" data-tipo="youtube" data-lista="UUZOiYeNlVlfUg8Eae1slnHQ" data-activo="no">
+        <div class="fachada">
+          <p class="fachada-titulo">Jiu-ji Podcast en YouTube</p>
+          <div class="fachada-botones">
+            <a class="btn rojo" href="https://www.youtube.com/@jiu-jipodcast" rel="noopener" target="_blank">Ver el canal</a>
+            <button class="btn oscuro cargar" type="button" hidden>Ver los episodios aquí</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>

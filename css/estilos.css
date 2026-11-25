@@ -15,6 +15,7 @@
   --mx: 0; --my: 0;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { background: var(--negro); scroll-behavior: smooth; }
 body { margin: 0; background: var(--negro); color: var(--blanco); font-family: var(--maquina); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; height: auto; }
@@ -132,6 +133,12 @@ h3 { font-family: var(--titulo); font-weight: 400; font-size: 20px; margin: 26px
 .reproductor { margin-top: 18px; min-height: 152px; display: grid; place-items: center; background: #ece9df; border-radius: 12px; }
 .reproductor.video { aspect-ratio: 16 / 9; min-height: 0; }
 .reproductor iframe { width: 100%; height: 100%; border: 0; border-radius: 12px; }
+
+/* Fachada de los reproductores: el reproductor solo carga cuando la persona lo pide */
+.fachada { display: grid; gap: 14px; justify-items: center; text-align: center; padding: 24px; }
+.fachada-titulo { font-family: var(--titulo); font-size: 22px; margin: 0; }
+.fachada-botones { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.btn.oscuro { background: var(--negro); color: var(--blanco); }
 
 /* Para marcas */
 .datos { padding-left: 0; list-style: none; display: grid; gap: 8px; }
