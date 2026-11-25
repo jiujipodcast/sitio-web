@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jiu-ji Podcast · Fuera del tatami</title>
+<meta name="description" content="Jiu-ji Podcast: conversaciones grabadas en el tatami, con kimono, sobre cómo el jiu-jitsu se aplica en tu trabajo y en tu vida. En colaboración con Gracie Colombia.">
+<meta name="theme-color" content="#141414">
+<link rel="canonical" href="https://jiujipodcast.com/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jiu-ji Podcast">
+<meta property="og:title" content="Jiu-ji Podcast · Fuera del tatami">
+<meta property="og:description" content="Conversaciones grabadas en el tatami, con kimono, sobre cómo el jiu-jitsu se aplica en tu trabajo y en tu vida. En colaboración con Gracie Colombia.">
+<meta property="og:url" content="https://jiujipodcast.com/">
+<meta property="og:image" content="https://jiujipodcast.com/img/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo de Jiu-ji Podcast: JIU-JI en tiza, sticker PODCAST y el eslogan Fuera del tatami">
+<meta property="og:locale" content="es_CO">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jiu-ji Podcast · Fuera del tatami">
+<meta name="twitter:description" content="Conversaciones grabadas en el tatami sobre cómo el jiu-jitsu se aplica en tu trabajo y en tu vida.">
+<meta name="twitter:image" content="https://jiujipodcast.com/img/compartir.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastSeries", "name": "Jiu-ji Podcast", "alternateName": "Fuera del tatami", "url": "https://jiujipodcast.com/", "description": "Conversaciones grabadas en el tatami, con kimono, sobre cómo el jiu-jitsu se aplica en el trabajo y en la vida. En colaboración con Gracie Colombia.", "inLanguage": "es", "image": "https://jiujipodcast.com/img/compartir.jpg", "email": "jiujipodcast@gmail.com", "sameAs": ["https://www.instagram.com/jiujipodcast/", "https://www.youtube.com/@jiu-jipodcast", "https://www.facebook.com/profile.php?id=61596651851798"]}</script>
+<link rel="preload" href="fuentes/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fuentes/special-elite.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/estilos.css">
+<script type="importmap">{ "imports": { "three": "./js/vendor/three.module.min.js" } }</script>
+<!-- La precarga va después del mapa de módulos: antes, el 3D a veces no encontraba Three.js -->
+<link rel="modulepreload" href="js/vendor/three.module.min.js">
+<link rel="modulepreload" href="js/escena.js">
+<script type="module" src="js/sitio.js"></script>
+</head>
+<body>
+<a class="saltar" href="#sobre">Saltar al contenido</a>
+
+<canvas id="escena" aria-hidden="true"></canvas>
+<div class="vineta" aria-hidden="true"></div>
+<canvas id="polvo" aria-hidden="true"></canvas>
+
+<header class="barra">
+  <a class="marca" href="#inicio" aria-label="Jiu-ji Podcast, ir al inicio">JIU-JI<span>podcast</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-raya" aria-hidden="true"></span><span class="txt">Menú</span></button>
+  <nav id="menu" aria-label="Principal">
+    <ul>
+      <li><a href="#sobre">Sobre el podcast</a></li>
+      <li><a href="#anfitriones">Anfitriones</a></li>
+      <li><a href="#episodios">Episodios</a></li>
+      <li><a class="destacado" href="#marcas">Para marcas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <div class="idioma" role="group" aria-label="Idioma / Language">
+    <button type="button" data-lang="es" aria-pressed="true" lang="es" title="Español">ES</button>
+    <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+  </div>
+  <button class="sonido" type="button" aria-pressed="false"><i aria-hidden="true"></i><span>Sonido apagado</span></button>
+</header>
+
+<main>
+  <!-- 0 · INICIO -->
+  <section id="inicio" class="estacion inicio" aria-labelledby="titulo-inicio">
+    <h1 id="titulo-inicio"><picture><source data-srcset="img/logo-fondo-oscuro.webp" type="image/webp"><img class="logo-plano" data-src="img/logo-fondo-oscuro.png" width="1200" height="654" alt="Jiu-ji Podcast. Fuera del tatami" decoding="async"></picture><noscript><img class="logo-sin-js" src="img/logo-fondo-oscuro.png" width="1200" height="654" alt="Jiu-ji Podcast. Fuera del tatami"></noscript></h1>
+    <div class="acciones">
+      <a class="btn rojo" href="#episodios" data-pendiente="Enlace de Spotify">Escúchalo en Spotify</a>
+      <a class="btn borde" href="https://www.youtube.com/@jiu-jipodcast" rel="noopener" target="_blank">Míralo en YouTube</a>
+    </div>
+    <p class="bajar" aria-hidden="true">baja al tatami ↓</p>
+  </section>
+
+  <!-- 1 · SOBRE EL PODCAST -->
+  <section id="sobre" class="estacion" data-lado="centro" aria-labelledby="titulo-sobre">
+    <div class="panel hoja">
+      <p class="nota">el podcast</p>
+      <h2 id="titulo-sobre">Sobre el podcast</h2>
+      <p>Una conversación relajada, grabada en el tatami y con kimono. Sin cambios de ropa ni transiciones: nos sentamos a hablar de lo que pasa fuera del tatami.</p>
+      <p class="pregunta">¿Cómo se aplica el jiu-jitsu en tu trabajo y en tu vida?</p>
+      <p>Cada invitado nos cuenta qué se llevó del tatami a su trabajo y a su vida. Te esperamos cada 15 días en Spotify y YouTube, y con los mejores momentos en nuestras redes.</p>
+      <ul class="redes-botones" aria-label="Nuestras redes">
+        <li><a class="red" href="https://www.instagram.com/jiujipodcast/" rel="noopener" target="_blank">Instagram</a></li>
+        <li><a class="red pendiente-enlace" href="#" data-pendiente="Enlace de TikTok">TikTok</a></li>
+        <li><a class="red" href="https://www.facebook.com/profile.php?id=61596651851798" rel="noopener" target="_blank">Facebook</a></li>
+        <li><a class="red" href="https://www.youtube.com/@jiu-jipodcast" rel="noopener" target="_blank">YouTube</a></li>
+        <li><a class="red pendiente-enlace" href="#" data-pendiente="Enlace de Spotify">Spotify</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2 · ANFITRIONES -->
+  <section id="anfitriones" class="estacion" data-lado="centro" aria-labelledby="titulo-anfitriones">
+    <div class="panel">
+      <h2 id="titulo-anfitriones" class="titulo-tiza">Anfitriones</h2>
+      <div class="polaroids">
+        <article class="polaroid sticker">
+          <div class="foto"><img src="img/anfitriones/salo.jpg" alt="Salo en el tatami" loading="lazy" onerror="this.remove()"><span class="pendiente">Foto pendiente</span></div>
+          <h3>Salo</h3>
+          <p class="cinturon">Cinturón blanco</p>
+        </article>
+        <article class="polaroid sticker">
+          <div class="foto"><img src="img/anfitriones/santi.jpg" alt="Santi en el tatami" loading="lazy" onerror="this.remove()"><span class="pendiente">Foto pendiente</span></div>
+          <h3>Santi</h3>
+          <p class="cinturon">Cinturón negro</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · EPISODIOS -->
+  <section id="episodios" class="estacion" data-lado="der" aria-labelledby="titulo-episodios">
+    <div class="panel hoja ancha">
+      <p class="nota">dale play</p>
+      <h2 id="titulo-episodios">Episodios</h2>
+      <p>Escúchalo mientras entrenas, manejas o trabajas, o míralo en video. Cada episodio nuevo aparece aquí.</p>
+      <div class="reproductor" data-tipo="spotify">
+        <p class="pendiente">Reproductor de Spotify del programa: falta el enlace del programa</p>
+      </div>
+      <div class="reproductor video" data-tipo="youtube">
+        <p class="pendiente">Lista de YouTube: falta el enlace del canal o de la lista</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · PARA MARCAS -->
+  <section id="marcas" class="estacion" data-lado="izq" aria-labelledby="titulo-marcas">
+    <div class="panel hoja ancha">
+      <p class="nota">para marcas</p>
+      <h2 id="titulo-marcas">Pon tu marca en el tatami</h2>
+      <p>Jiu-ji Podcast habla con gente que entrena jiu-jitsu y lo lleva a su trabajo y a su vida. Si tu marca le habla a esa comunidad, conversemos.</p>
+
+      <h3>A quién llegamos</h3>
+      <p>Personas que practican jiu-jitsu, dentro y fuera del tatami.</p>
+
+      <h3>Formatos de patrocinio</h3>
+      <ul class="formatos">
+        <li class="sticker"><strong>Mención</strong><span>Tu marca, nombrada por los anfitriones durante el episodio.</span></li>
+        <li class="sticker"><strong>Producto en el set</strong><span>Tu producto a la vista en el tatami mientras conversamos.</span></li>
+        <li class="sticker"><strong>Ronda rápida patrocinada</strong><span>El segmento de preguntas rápidas, presentado por tu marca.</span></li>
+        <li class="sticker"><strong>Temporada</strong><span>Tu marca acompaña una temporada completa del podcast.</span></li>
+      </ul>
+      <a class="btn rojo" href="#contacto" data-motivo="media-kit">Pide el media kit</a>
+    </div>
+  </section>
+
+  <!-- 5 · CONTACTO -->
+  <section id="contacto" class="estacion" data-lado="der" aria-labelledby="titulo-contacto">
+    <div class="panel cuaderno">
+      <h2 id="titulo-contacto">Escríbenos</h2>
+      <p>¿Quieres patrocinar, proponer un invitado o simplemente saludar? Déjanos tu mensaje y te respondemos al correo.</p>
+      <form class="formulario" id="formulario" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="ea741bac-db0f-40d9-9d38-931517409911">
+        <input type="hidden" name="subject" value="Nuevo mensaje desde jiujipodcast.com">
+        <input type="hidden" name="from_name" value="Sitio web Jiu-ji Podcast">
+        <input type="checkbox" name="botcheck" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="campo">
+          <label for="f-nombre">Tu nombre</label>
+          <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+        </div>
+        <div class="campo">
+          <label for="f-correo">Tu correo</label>
+          <input id="f-correo" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="campo">
+          <label for="f-motivo">Motivo</label>
+          <select id="f-motivo" name="motivo" required>
+            <option value="patrocinio">Patrocinio</option>
+            <option value="media-kit">Quiero el media kit</option>
+            <option value="invitado">Proponer un invitado</option>
+            <option value="alianza">Prensa o alianzas</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="f-mensaje">Tu mensaje</label>
+          <textarea id="f-mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        <div class="autoriza">
+          <input id="f-autoriza" name="autorizacion" type="checkbox" value="Sí autorizo" required>
+          <label for="f-autoriza">Autorizo a Jiu-ji Podcast a tratar mis datos personales para responder mi mensaje, según la <a href="politica-de-datos.html">Política de tratamiento de datos</a>.</label>
+        </div>
+        <button class="btn rojo" type="submit">Enviar mensaje</button>
+        <p class="estado" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="gracie">
+    <p>En colaboración con</p>
+    <span class="pendiente logo-gracie">Logo de Gracie Colombia pendiente</span>
+    <p class="gracie-nombre">Gracie Colombia</p>
+  </div>
+  <ul class="redes-botones pie-redes" aria-label="Nuestras redes">
+    <li><a class="red" href="https://www.instagram.com/jiujipodcast/" rel="noopener" target="_blank">Instagram</a></li>
+    <li><a class="red pendiente-enlace" href="#" data-pendiente="Enlace de TikTok">TikTok</a></li>
+    <li><a class="red" href="https://www.facebook.com/profile.php?id=61596651851798" rel="noopener" target="_blank">Facebook</a></li>
+    <li><a class="red" href="https://www.youtube.com/@jiu-jipodcast" rel="noopener" target="_blank">YouTube</a></li>
+    <li><a class="red pendiente-enlace" href="#" data-pendiente="Enlace de Spotify">Spotify</a></li>
+  </ul>
+  <p class="legal"><a href="politica-de-datos.html">Política de tratamiento de datos</a> · © 2026 Jiu-ji Podcast</p>
+</footer>
+</body>
+</html>
